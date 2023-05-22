@@ -13,9 +13,7 @@
 #include <logger>
 #include <errors>
 #include <YSI_Data\y_iterate>
-#include <YSI_Coding\y_inline>// 2:23 am 22/05/2023 --> Added y_inline, fix reparsing issues --> //
 #include <YSI_Coding\y_timers>
-#include <YSI_Visual\y_dialog>// 2:23 am 22/05/2023 --> Added y_dialog, fix reparsing issues --> //
 #include <streamer>
 #include <uuid>
 #include <button>
@@ -2095,7 +2093,7 @@ stock GetItemsInRange(Float:x, Float:y, Float:z, Float:range = 300.0, Item:items
 ==============================================================================*/
 
 
-hook OnPlayerKeyStateChange(playerid, KEY:newkeys, KEY:oldkeys) {
+hook OnPlayerKeyStateChange(playerid, newkeys, oldkeys) {
     if(IsPlayerInAnyVehicle(playerid) || GetPlayerState(playerid) == PLAYER_STATE_SPECTATING) {
         return 1;
     }
