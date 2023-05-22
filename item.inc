@@ -1012,8 +1012,8 @@ timer _item_giveItem[500](playerid, targetid) {
         itm_TypeData[type][itm_attachRotX],
         itm_TypeData[type][itm_attachRotY],
         itm_TypeData[type][itm_attachRotZ],
-        .materialColour1 = itm_TypeData[type][itm_colour],
-        .materialColour2 = itm_TypeData[type][itm_colour]
+        .materialcolor1 = itm_TypeData[type][itm_colour],
+        .materialcolor2 = itm_TypeData[type][itm_colour]
     );
 
     SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
